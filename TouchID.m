@@ -24,6 +24,7 @@ RCT_EXPORT_METHOD(authenticate: (NSString *)reason
                       callback: (RCTResponseSenderBlock)callback)
 {
     LAContext *context = [[LAContext alloc] init];
+    context.localizedFallbackTitle = @"";
     NSError *error;
 
     // Device has TouchID
